@@ -124,6 +124,13 @@ p users["Erik"][:lottery_numbers]
 
 p users["Avril"][:pets][0][:species]
 
+#or...
+
+for pet in users["Avril"][:pets]
+  if pet[:name] == "monty"
+    p "#{pet[:species]}"
+  end
+end
 # # Get the smallest of Erik's lottery numbers
 
 p users["Erik"][:lottery_numbers].sort()[0]
